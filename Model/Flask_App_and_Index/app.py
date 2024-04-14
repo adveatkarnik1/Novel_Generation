@@ -30,7 +30,7 @@ embeddings_model_name = "mixedbread-ai/mxbai-embed-large-v1"
 
 embeddings = HuggingFaceEmbeddings(model_name=embeddings_model_name)
 
-index_loc = "D:\\Web Development\\Novel Generator MERN\\model\\faiss_percy_jackson_index"
+index_loc = "faiss_percy_jackson_index"
 index = FAISS.load_local(index_loc, embeddings,allow_dangerous_deserialization=True)
 
 
