@@ -24,7 +24,7 @@ os.environ['HUGGINGFACEHUB_API_TOKEN'] = inference_api_key
 
 groq_api_key = os.getenv('GROQ_API_KEY')
 
-chat = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name="llama2-70b-4096", max_tokens = 600)
+chat = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name="llama3-70b-8192", max_tokens = 600)
 
 embeddings_model_name = "mixedbread-ai/mxbai-embed-large-v1"
 
