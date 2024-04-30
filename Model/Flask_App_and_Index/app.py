@@ -30,7 +30,7 @@ embeddings_model_name = "mixedbread-ai/mxbai-embed-large-v1"
 
 embeddings = HuggingFaceEmbeddings(model_name=embeddings_model_name)
 
-index_loc = "faiss_percy_jackson_index"
+index_loc = "model\\Flask_App_and_Index\\faiss_percy_jackson_index"
 index = FAISS.load_local(index_loc, embeddings,allow_dangerous_deserialization=True)
 
 
@@ -93,18 +93,21 @@ def query_responder(question):
 
 
 from flask import Flask,request,jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-@app.route('/',methods=['POST'])
+@app.route('/api',methods=['GET','POST'])
 def func():
     data=request.json
-    response=""
+    data=data['body']
+    print(data)
+    response={}
     if(data['questionType']==1):
         response=story_generator(data['question'])
     else:
         response=query_responder(data['question'])
-
     return jsonify(response)
 
 
