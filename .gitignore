@@ -1,2 +1,3 @@
 server/node_modules
 server/.env
+Model/Flask_App_and_Index/.env
