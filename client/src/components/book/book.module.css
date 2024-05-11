@@ -1,0 +1,115 @@
+.bookAndCards{
+    width: 100%;
+    /* height: 170%; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.bookDiv{
+    width: 100%;
+    /* height: 80%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bookImgDiv{
+    width: 30%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    min-width: 160px;
+}
+
+.bookImg{
+    width: 100%;
+    /* height: 60%; */
+    border: 3px solid black;
+    padding: 0px;
+}
+
+.bookInfo{
+    width: 60%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+
+.bookDescription{
+    width: 100%;
+    /* height: auto; */
+    /* max-height: 240px; */
+    overflow-y: auto;
+}
+
+.readButton{
+
+    width: 20%;
+    /* height: 90%; */
+    margin: 3% 7%;
+}
+
+.favouritesButton{
+    width: 45%;
+    /* height: 90%; */
+    margin: 3% 7%;
+    background-color: rgb(117, 27, 78);
+}
+
+.buttonDiv{
+    width: 100%;
+    /* height: 12%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 288px;
+}
+
+.cardRow{
+    width: 80%;
+    /* height: 80%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10%;
+}
+
+.appearChat {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.footer {
+    width: 95%;
+    margin: 1%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.readMode{
+    width: 100%;
+    /* height: 170%; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    justify-content: center;
+}

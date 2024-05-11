@@ -1,0 +1,12 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    /* font-size: 90%; */
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 40%;
+    }
+}

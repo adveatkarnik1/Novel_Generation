@@ -1,0 +1,56 @@
+.generatedResponse {
+    width: 90%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1%;
+    border: 1px solid black;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 1%;
+}
+.chatDiv{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.userMsgDiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.msg{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(167, 215, 158);
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    padding: 2px 5px;
+    margin: 1%;
+    border: 1px solid black;
+    border-radius: 3px;
+    /* overflow-wrap:break-word; */
+    word-wrap: break-word;
+}
+
+.botMsg{
+    background-color: rgb(155, 145, 145);
+}
+
+.botMsgDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: inherit;
+}

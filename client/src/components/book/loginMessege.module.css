@@ -1,0 +1,42 @@
+.loginMessegeDiv{
+    width: 30%;
+    height: auto;
+    background-color: rgb(121, 193, 169);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    z-index: 4;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+}
+
+.closeButtonDiv{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.messege{
+    width: 90%;
+    height: auto;
+}
+
+/* .msgOuterDiv{
+    z-index: 4;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.loginButton{
+    width: 30%;
+}

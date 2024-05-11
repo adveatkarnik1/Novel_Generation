@@ -1,0 +1,94 @@
+.trendingBook{
+    width: 100%;
+    margin: 1%;
+    /* width: 150px; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    max-height: 350px;
+    min-width: 177px;
+    flex-grow: 0;
+}
+
+.trendingBookBody{
+    height: 53%;
+    margin: 1%;
+    width: 97%;
+}
+
+.trendingBookBookImg{
+    height: 45%;
+    width: 98%;
+}
+
+/* .bookName{
+    height: 10%;
+    text-overflow: ellipsis;
+   width: 100%;
+    margin-bottom: 5%;
+    overflow-y: auto;
+}
+
+.bookDescription{
+    height: 65%;
+    width: 100%;
+    overflow-y: auto;
+} */
+
+.bookName{
+    height: 20%;
+    text-overflow: ellipsis;
+    /* height: auto; */
+    width: 100%;
+    margin-bottom: 5%;
+    /* overflow-y: auto; */
+    overflow: hidden;
+}
+
+.bookNameExp {
+    height: auto;
+    text-overflow: ellipsis;
+    /* height: auto; */
+    width: auto;
+    margin-bottom: 5%;
+    text-overflow: ellipsis;
+    translate: 10%;
+    background-color: bisque;
+        z-index: 3;
+        position: absolute;
+        padding: 0.5%;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: ease-in-out
+}
+
+.bookDescription{
+    height: 65%;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bookDescriptionExp {
+    height: auto;
+    width: 30%;
+    overflow: hidden;
+    translate:10%;
+    background-color: bisque;
+    z-index: 3;
+    position: absolute;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.bookOpenButton{
+    height: 10%;
+    width: 100%;
+}
+
+.bookLink{
+    color: black;
+    text-decoration: none;
+}

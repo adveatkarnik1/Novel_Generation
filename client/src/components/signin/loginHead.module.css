@@ -1,0 +1,27 @@
+.loginLabel {
+    width: 95%;
+    height: 10%;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loginSpan {
+    width: 45%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: inherit;
+    border: none;
+    font-size: x-large;
+}
+
+.activeSpan {
+    background-color: rgb(96, 94, 92);
+    border: 1px solid black;
+    border-radius: 5px;
+}

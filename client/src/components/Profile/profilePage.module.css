@@ -1,0 +1,30 @@
+.profilePage{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.appearChat {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.footer {
+    width: 95%;
+    margin: 1%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

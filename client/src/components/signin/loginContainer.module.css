@@ -1,0 +1,56 @@
+.loginContainer {
+    width: 25%;
+    height: 60%;
+    background-color: bisque;
+    min-width: 356px;
+    min-height: 514px;
+    max-width: 500px;
+    max-height: 700px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.inpDiv {
+    width: 95%;
+    height: 15%;
+    ;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* #root {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.loginForm {
+    width: 90%;
+    display: flex;
+    align-items: start;
+    padding: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+}
+
+.subButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button{
+    height: 80%;
+        width: 30%;
+}

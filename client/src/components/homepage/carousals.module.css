@@ -1,0 +1,10 @@
+.carousels {
+    width: 100%;
+    margin: 1%;
+    height: 40%;
+}
+
+.carouselImg{
+    height: 100%;
+    width: 100%;
+}

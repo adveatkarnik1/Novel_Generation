@@ -1,0 +1,42 @@
+.slidebarAndOtherFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.CentralItems{
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    height: 100%;
+    margin: 1%;
+    margin-bottom: 0%;
+    flex-wrap: nowrap;
+}
+
+.appearChat{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+.footer{
+    width: 95%;
+    margin: 1%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,19 @@
+.myNavbar {
+    background-color: rgba(23, 2, 38, 0.784) !important;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    opacity: 1;
+}
+
+.loginButtons {
+    margin: 1% 2%;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 15%;
+}
+
+.Links{
+    text-decoration: none;
+    color: black;
+}
