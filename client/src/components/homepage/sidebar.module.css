@@ -1,12 +1,35 @@
+
 .sidebar {
     width: 20%;
     height: 100%;
     /* font-size: 90%; */
     text-overflow: ellipsis;
+    border-right: 1px solid rgb(134, 132, 132) !important;
+    background-color: black !important;
+    color: white;
 }
 
 @media (max-width: 768px) {
     .sidebar {
         width: 40%;
     }
+}
+
+.sidebarComp{
+    color: white !important;
+    /* --bs-nav-link-hover-color:white; */
+}
+
+
+
+.onHover{
+margin-top: 2px;
+--bs-nav-pills-link-active-bg:#e68a19;
+}
+
+.onHover:hover{
+    background-color: #ebb26c;
+    /* opacity: 0.4; */
+    border-radius: 5px;
+    color: white;
 }

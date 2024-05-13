@@ -27,7 +27,7 @@ const UserProvider = ({ children }) => {
       console.log(token);
       if(token){
         token="Bearer "+token;
-        const response = await axios.get("http://localhost:8080/api/getUserData", {
+        const response = await axios.get("https://novel-generation-server-0bu2.onrender.com/api/getUserData", {
           headers: {
             Authorization: token,
           },

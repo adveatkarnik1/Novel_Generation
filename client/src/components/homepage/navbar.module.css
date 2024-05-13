@@ -1,5 +1,5 @@
 .myNavbar {
-    background-color: rgba(23, 2, 38, 0.784) !important;
+    background-color: black !important;
     z-index: 2;
     position: sticky;
     top: 0;
@@ -15,5 +15,28 @@
 
 .Links{
     text-decoration: none;
-    color: black;
+    color: #e68a19;
+    --bs-nav-link-hover-color:none;
+    --bs-navbar-active-color:white
+}
+
+.Links:hover{
+    text-decoration: underline;
+}
+
+.sidebarToggle{
+    width: 2%;
+    height: 2%;
+    color: white;
+    background-color: #e68a19;
+    margin:0% 6px;
+    border-radius:5px;
+    min-width:20px;
+    cursor: pointer;
+    min-height: 20px;
+}
+
+.searchButton{
+    background-color: #e68a19;
+    color: white;
 }

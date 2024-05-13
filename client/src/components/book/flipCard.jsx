@@ -15,7 +15,7 @@ const Card = ({name,desc}) => {
     >
       <div className="card-inner">
         <div className="card-front">
-          <h2>{name}</h2>
+          <h2><center>{name}</center></h2>
         </div>
         <div className="card-back">
           <p>{desc}</p>

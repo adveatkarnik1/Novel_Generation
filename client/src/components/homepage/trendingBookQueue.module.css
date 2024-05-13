@@ -2,15 +2,13 @@
     width: 98%;
     margin: 1%;
     height: auto;
-    /* height: 20%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* min-height: 100px; */
     align-content: flex-start;
 }
-.trendingBookQueue{
+/* .trendingBookQueue{
     width: 78%;
     margin: 1%;
     height: 100%;
@@ -20,8 +18,18 @@
     column-gap: 3px;
     justify-content: space-between;
     grid-auto-flow: dense;
-}
+} */
 
+
+.trendingBookQueue{
+    width: 78%;
+    margin:1%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .arrowDiv{
     width: 10%;
     height: 100%;

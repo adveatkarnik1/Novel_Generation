@@ -18,12 +18,13 @@ import ChatBot from "./components/chatBot/chatbot";
 import ChatBox from "./components/chatBot/chatBox";
 
 function App() {
-  let [ sidebarToggle, setSidebarToggle ] = useState(true);
+  let [ sidebarToggle, setSidebarToggle ] = useState(false);
   let [appearChat,setAppearChat]=useState(false);
   function handleSidebarToggle() {
     setSidebarToggle(!sidebarToggle);
   }
    return <>
+        
        <UserProvider>
          <Router>
            <Routes>

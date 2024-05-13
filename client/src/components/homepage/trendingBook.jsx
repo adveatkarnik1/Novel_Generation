@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 
 
 function TrendingBook({element}) {
-  // console.log('element 1',element);
   let [expDesc,setExpDesc]=useState(false);
   let [expName, setExpName] = useState(false);
-  // console.log('type',element.coverPhoto.type)
+  // console.log(element);
+
   return (
     <>
       <Link target="_blank" to={`/book/${element._id}`}  className={css.bookLink}>
@@ -48,7 +48,7 @@ function TrendingBook({element}) {
                 // onMouseLeave={() => setExpDesc(!expDesc)}
               >{element.description}</p>
             )}
-            <Button variant="primary">Open</Button>
+            <Button className={`${css.bookOpenButton}`} variant="primary">Open</Button>
           </div>
         </div>
       </Link>

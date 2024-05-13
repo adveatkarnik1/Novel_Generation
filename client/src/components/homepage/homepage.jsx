@@ -16,7 +16,7 @@ function Homepage({ appearChat }) {
   let [isLoading, setIsloading] = useState(true);  
 
   const fetchBooks=async ()=>{
-    const response=await axios.get("http://localhost:8080/api/explore?search=percy");
+    const response=await axios.get("https://novel-generation-server-0bu2.onrender.com/api/explore?search=percy");
     const data=await response.data;
     setBooks(await data);
   }
@@ -43,6 +43,7 @@ function Homepage({ appearChat }) {
           All Books
         </h3>
         <AllBooks books={books}></AllBooks></>:<Loading></Loading>}
+        <hr></hr>
         <Footer></Footer>
       </div>
     </>

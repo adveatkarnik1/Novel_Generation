@@ -29,7 +29,7 @@ function TrendingBookQueue(props) {
             width="30"
             height="30"
             fill="currentColor"
-            class="bi bi-arrow-left-circle"
+            className="bi bi-arrow-left-circle"
             viewBox="0 0 16 16"
             style={{ cursor: "pointer" }}
             onClick={slideLeft}
@@ -42,10 +42,10 @@ function TrendingBookQueue(props) {
         </div>}
         <div className={`${css.trendingBookQueue}`}>
           {
-            bookArr && bookArr.slice(0,Math.min(4,bookArr.length)).map((element,index)=><TrendingBook element={element}></TrendingBook>)
+            bookArr && bookArr.slice(0,Math.min(3,bookArr.length)).map((element,index)=><TrendingBook element={element}></TrendingBook>)
           }
         </div>
-        {bookArr.length >4 && <div className={`${css.arrowDiv}`}>
+        {bookArr.length >3 && <div className={`${css.arrowDiv}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"

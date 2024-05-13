@@ -1,0 +1,52 @@
+.searchContainer{
+    height: auto;
+    max-height: 40%;
+    overflow-y:auto;
+    width: 400px;
+    z-index: 4;
+    position: fixed;
+    left:65%;
+    bottom: auto;
+    background-color: black;
+}
+
+.searchResults{
+    height: 150px;
+    width: 95%;
+    margin: 2px 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bookImg{
+    width: 30%;
+    height: 100%;
+}
+
+.bookTitle{
+    color: #e68a19;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 1%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookLink{
+    text-decoration: none;
+}
+
+.disappearButton{
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 4;
+    position: fixed;
+}

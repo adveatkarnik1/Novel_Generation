@@ -25,7 +25,7 @@ function Generated({generated}) {
             width="30"
             height="30"
             fill="currentColor"
-            class="bi bi-chevron-double-down"
+            className="bi bi-chevron-double-down"
             viewBox="0 0 16 16"
             style={{ cursor: "pointer" }}
             onClick={expandBooks}

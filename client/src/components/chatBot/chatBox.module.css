@@ -29,7 +29,8 @@
     display: flex;
     flex-direction: column;
     margin: 1%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border: 5px solid rgb(134, 132, 132);
     padding: 1%;
     border-radius: 5px;
     overflow-y: auto;
@@ -89,7 +90,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgb(167, 215, 158);
+    background-color: green;
     max-width: 80%;
     width: auto;
     height: auto;
@@ -99,10 +100,12 @@
     border-radius: 3px;
     /* overflow-wrap:break-word; */
     word-wrap: break-word;
+    color: white;
 }
 
 .botMsg{
-    background-color: rgb(155, 145, 145);
+    background-color: rgb(33, 31, 31);
+    color: white;
 }
 
 .botMsgDiv {
@@ -119,6 +122,22 @@
     width: 7%;
     height: auto;
     border: none;
+    background-color: #e68a19;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chatPostButton2 {
+    width: 7%;
+    height: auto;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chatPostButton:hover{
+    background-color: green;
 }
 
 .submitButton{
@@ -139,8 +158,14 @@
     margin: 3%;
     height: auto;
     overflow-wrap: break-word;
+    background-color: #e68a19;
+    color: white;
+}
+
+.generatebuttons:hover{
+    background-color: green;
 }
 
 .onClickColour{
-    background-color: gray;
+    background-color: green;
 }

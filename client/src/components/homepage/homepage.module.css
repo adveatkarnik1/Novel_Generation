@@ -10,7 +10,8 @@
 .CentralItems{
     display: flex;
     flex-direction: column;
-    width: 77%;
+    /* width: 77%; */
+    width: 100%;
     height: 100%;
     margin: 1%;
     margin-bottom: 0%;

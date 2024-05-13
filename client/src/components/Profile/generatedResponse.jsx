@@ -18,13 +18,13 @@ function GeneratedResponse({response}) {
         {/* {response.slice(0,len)} */}
         <div className={`${css.chatDiv}`}>
                   {<div className={`${css.userMsgDiv}`}>
-                    <p className={`${css.msg}`}>{response.query.slice(0,len)}<a href="" onClick={(e)=>increaseLen(e,response.query)}>{
+                    <p className={`${css.msg}`}>{response.query.slice(0,len)}<a href="" className={`${css.readToggle}`} onClick={(e)=>increaseLen(e,response.query)}>{
                       len<response.query.length?"...Read more":response.query.length<545?"":"Read less..."
                       }</a></p>
                   </div>}
                   {<div className={`${css.botMsgDiv}`}>
                     <p className={`${css.msg} ${css.botMsg}`}>
-                      {response.result.slice(0,len)}<a href="" onClick={(e)=>increaseLen(e,response.result)}>{len<response.result.length?"...Read more":response.result.length<545?"":"Read less..."}</a>
+                      {response.result.slice(0,len)}<a className={`${css.readToggle}`} href="" onClick={(e)=>increaseLen(e,response.result)}>{len<response.result.length?"...Read more":response.result.length<545?"":"Read less..."}</a>
                     </p>
                   </div>}
                 </div>

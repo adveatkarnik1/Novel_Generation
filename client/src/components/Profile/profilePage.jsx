@@ -25,7 +25,7 @@ const ProfilePage=({appearChat}) => {
     
     
     const bookArr1=await favourites.map(async (element)=>{
-      const response=await axios.post("http://localhost:8080/api/getBookData?_id="+element._id,{
+      const response=await axios.post("https://novel-generation-server-0bu2.onrender.com/api/getBookData?_id="+element._id,{
         headers:{
           "Content-Type":"application/json"
         },
@@ -73,9 +73,11 @@ const ProfilePage=({appearChat}) => {
             </div>
             <div>
               <h5>Email:</h5>
+              novelguy@gmail.com
             </div>
             <div>
               <h5>Phone:</h5>
+              02346-789563
             </div>
           </div>
         </footer>

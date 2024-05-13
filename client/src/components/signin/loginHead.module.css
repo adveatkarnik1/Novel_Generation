@@ -15,13 +15,20 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    background-color: inherit;
+    background-color: #e68a19;
     border: none;
     font-size: x-large;
+    margin:0px 3px;
+    border-radius: 5px;
+}
+
+.loginSpan:hover{
+    background-color: green;
+    border-radius: 5px;
 }
 
 .activeSpan {
-    background-color: rgb(96, 94, 92);
+    background-color: green;
     border: 1px solid black;
     border-radius: 5px;
 }

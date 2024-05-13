@@ -20,7 +20,7 @@ function LoginContainer({}) {
   const login= async (e) => {
      e.preventDefault();
     try {
-      response=await fetch("http://localhost:8080/api/login",{
+      response=await fetch("https://novel-generation-server-0bu2.onrender.com/api/login",{
             method: "POST",
             headers:{
                 "Content-type":"application/json"
@@ -43,7 +43,7 @@ function LoginContainer({}) {
      e.preventDefault();
     try {
       console.log(userInfo);
-      response = axios.post("http://localhost:8080/api/login", userInfo);
+      response = axios.post("https://novel-generation-server-0bu2.onrender.com/api/login", userInfo);
       switchTab(!tab);
     } catch (error) {}
   }
@@ -52,6 +52,7 @@ function LoginContainer({}) {
   }
   return (
     <div className="signInDiv">
+      <p className="Appname"><h2>Btech Novelwala</h2></p>
       <div className={`${css.loginContainer}`}>
         <LoginHead handleTab={handleTab} tab={tab}></LoginHead>
         <form className={`${css.loginForm}`} onSubmit={tab ? login : register}>

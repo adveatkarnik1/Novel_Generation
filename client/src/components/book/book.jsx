@@ -9,14 +9,13 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import PDFViewer from "../../pdfViewer";
 import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 import Loading from "../../loading";
 
 function Book({ appearChat }) {
   let { loginStatus, getUser, updateUserState, generated, favourites, _id } =
     useUserContext();
   let [Close, setClose] = useState(true);
-  let [stars,setStars]=useState([false,false,false,false,false]);
+  let [stars, setStars] = useState([false, false, false, false, false]);
   let [readMode, setReadMode] = useState(true);
 
   let toggleSignForFetchingBook = 0;
@@ -30,7 +29,7 @@ function Book({ appearChat }) {
 
   const fetchBook = async () => {
     const response = await axios.post(
-      "http://localhost:8080/api/getBookData?_id=" + book_id,
+      "https://novel-generation-server-0bu2.onrender.com/api/getBookData?_id=" + book_id,
       {
         headers: {
           "Content-Type": "application/json",
@@ -52,26 +51,29 @@ function Book({ appearChat }) {
   function handleClose() {
     setClose(!Close);
   }
-  const  rate=async (num) => {
-    let copy=[];
-    for(let i=0;i<5;++i){
-      copy.push(i<num?true:false);
+  const rate = async (num) => {
+    let copy = [];
+    for (let i = 0; i < 5; ++i) {
+      copy.push(i < num ? true : false);
     }
     setStars(copy);
-    const response=await axios.post("http://localhost:8080/api/updateBookRating",{
-      headers:{
-        "Content-Type":"application/json",
-      },
-      body:{
-        book_id,
-        user_id:_id,
-        rating:num
+    const response = await axios.post(
+      "https://novel-generation-server-0bu2.onrender.com/api/updateBookRating",
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: {
+          book_id,
+          user_id: _id,
+          rating: num,
+        },
       }
-    });
+    );
 
-    const data=await response.data;
+    const data = await response.data;
     console.log(await data.msg);
-  }
+  };
   const handleBookOper = async (oper) => {
     if (!loginStatus) {
       handleClose();
@@ -80,7 +82,7 @@ function Book({ appearChat }) {
     } else if (oper == "favourites") {
       let newFavourites = [...favourites, { _id: book._id }];
       const updateStatus = await axios.post(
-        "http://localhost:8080/api/updateUser",
+        "https://novel-generation-server-0bu2.onrender.com/api/updateUser",
         {
           headers: {
             "Content-Type": "application/json",
@@ -142,7 +144,7 @@ function Book({ appearChat }) {
                         width="16"
                         height="16"
                         fill="#c29920"
-                        class="bi bi-star-fill"
+                        className="bi bi-star-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
@@ -164,7 +166,18 @@ function Book({ appearChat }) {
                         className={`${css.favouritesButton}`}
                         variant="danger"
                       >
-                        Add to Favourites
+                        {/* <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="pink"
+                          className="bi bi-suit-heart-fill"
+                          viewBox="0 0 16 16"
+                          style={{marginRight:'2px'}}
+                        >
+                          <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                        </svg> */}
+                        <span>Add to Favourites</span>
                       </Button>{" "}
                       {/* <Button
                 onClick={() => handleBookOper("rate")}
@@ -175,25 +188,32 @@ function Book({ appearChat }) {
               </Button> */}
                       <Dropdown
                         onClick={() => handleBookOper("rate")}
-                        className={`${css.readButton}`}
+                        className={`${css.rateButton}`}
                       >
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                           Rate it
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                          <div style={{cursor:'pointer',display:"flex",flexDirection:'row',justifyContent:'center'}}>
+                          <div
+                            style={{
+                              cursor: "pointer",
+                              display: "flex",
+                              flexDirection: "row",
+                              justifyContent: "center",
+                            }}
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
-                              fill={stars[0]?"#c29920":"black"}
-                              class="bi bi-star-fill"
+                              fill={stars[0] ? "#c29920" : "black"}
+                              className="bi bi-star-fill"
                               viewBox="0 0 16 16"
                               id="1"
                               // onMouseEnter={()=>rate(1,'hover')}
                               // onMouseLeave={()=>setStars([false,false,false,false,false])}
-                              onClick={()=>rate(1,'rate')}
+                              onClick={() => rate(1, "rate")}
                             >
                               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>{" "}
@@ -201,13 +221,13 @@ function Book({ appearChat }) {
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
-                              fill={stars[1]?"#c29920":"black"}
-                              class="bi bi-star-fill"
+                              fill={stars[1] ? "#c29920" : "black"}
+                              className="bi bi-star-fill"
                               viewBox="0 0 16 16"
                               id="2"
                               // onMouseEnter={()=>rate(2,'hover')}
                               // onMouseLeave={()=>setStars([false,false,false,false,false])}
-                              onClick={()=>rate(2,'rate')}
+                              onClick={() => rate(2, "rate")}
                             >
                               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>{" "}
@@ -215,13 +235,13 @@ function Book({ appearChat }) {
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
-                              fill={stars[2]?"#c29920":"black"}
-                              class="bi bi-star-fill"
+                              fill={stars[2] ? "#c29920" : "black"}
+                              className="bi bi-star-fill"
                               viewBox="0 0 16 16"
                               id="3"
                               // onMouseEnter={()=>rate(3,'hover')}
                               // onMouseLeave={()=>setStars([false,false,false,false,false])}
-                              onClick={()=>rate(3,'rate')}
+                              onClick={() => rate(3, "rate")}
                             >
                               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>{" "}
@@ -229,13 +249,13 @@ function Book({ appearChat }) {
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
-                              fill={stars[3]?"#c29920":"black"}
-                              class="bi bi-star-fill"
+                              fill={stars[3] ? "#c29920" : "black"}
+                              className="bi bi-star-fill"
                               viewBox="0 0 16 16"
                               id="4"
                               // onMouseEnter={()=>rate(4,'hover')}
                               // onMouseLeave={()=>setStars([false,false,false,false,false])}
-                              onClick={()=>rate(4,'rate')}
+                              onClick={() => rate(4, "rate")}
                             >
                               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>{" "}
@@ -243,23 +263,24 @@ function Book({ appearChat }) {
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
-                              fill={stars[4]?"#c29920":"black"}
-                              class="bi bi-star-fill"
+                              fill={stars[4] ? "#c29920" : "black"}
+                              className="bi bi-star-fill"
                               viewBox="0 0 16 16"
                               id="5"
                               // onMouseOver={()=>rate(5,'hover')}
                               // onMouseLeave={()=>setStars([false,false,false,false,false])}
-                              onClick={()=>rate(5,'rate')}
+                              onClick={() => rate(5, "rate")}
                             >
                               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>{" "}
-                            </div>
+                          </div>
                           {/* </Dropdown.Item> */}
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
                   </div>
                 </div>
+                <h2 className={`${css.mainCharTitle}`}>Main Characters</h2>
                 <div className={`${css.cardRow}`}>
                   <Card
                     name={book.mainCharacters[0].name}
@@ -281,7 +302,9 @@ function Book({ appearChat }) {
             )}
           </div>
         </>
-      ):<Loading className={``}></Loading>}
+      ) : (
+        <Loading className={``}></Loading>
+      )}
     </>
   );
 }

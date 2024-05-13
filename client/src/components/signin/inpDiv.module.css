@@ -1,7 +1,6 @@
 .inpDiv {
     width: 95%;
-    height: 20%;
-    ;
+    height: 20%;;
     margin: 3%;
     display: flex;
     justify-content: center;
@@ -12,10 +11,12 @@
 .inp {
     width: 90%;
     height: 40%;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid #e68a19;
+    /* border-radius: 10px; */
     margin: 3% 0%;
     display: block;
+    padding: 3px;
+    /* text-transform: capitalize; */
 }
 
 .inpLabel {
@@ -24,4 +25,6 @@
     font-size: large;
     display: block;
     margin-bottom: 5%;
+    color: #e68a19;
+    text-transform: capitalize;
 }
