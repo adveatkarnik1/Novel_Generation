@@ -43,9 +43,11 @@ function LoginContainer({}) {
      e.preventDefault();
     try {
       console.log(userInfo);
-      response = axios.post("https://novel-generation-server-0bu2.onrender.com/api/login", userInfo);
+      response =await axios.post("https://novel-generation-server-0bu2.onrender.com/api/login", userInfo);
       switchTab(!tab);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
   function handleTab() {
     switchTab(!tab);
